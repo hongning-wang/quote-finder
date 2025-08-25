@@ -13,7 +13,6 @@ class Command(BaseCommand):
             data = resp.json()['data']
             for q in data:
                 serializer = QuoteSerializer(data = {
-                    'id': q['id'],
                     'author': q['author']['name'],
                     'content': q['content'],
                     'tags': q['tags']
