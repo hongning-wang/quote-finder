@@ -13,6 +13,11 @@ pip install -r requirements.txt
 #Create database
 python manage.py makemigrations api
 python manage.py migrate api
+```
+Obtain a Gemini API id from Google. Then
+```shell
+#Add the API id as an environment secret
+echo 'GEMINI_API_ID=[id]' > .env 
 #Read quotes and create embeddings.
 python manage.py fetch_quotes
 python manage.py embed_quotes
