@@ -7,6 +7,7 @@ LAST_PAGE = 210
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
+        """Scrape example quotes from an existing website"""
         for page in range(0, LAST_PAGE+1):
             resp = requests.get(BASE_URL, params={"page":page}, timeout = 10)
             resp.raise_for_status()

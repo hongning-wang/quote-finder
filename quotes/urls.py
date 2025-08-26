@@ -17,7 +17,8 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from api.views import QuoteListCreateView
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path("api/", QuoteListCreateView.as_view(), name="quotes"),
 ]

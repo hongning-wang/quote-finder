@@ -5,6 +5,9 @@ from api.retrieval import embed_text
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
+        """
+        Embed all currently unprocessed quotes.
+        """
         quotes = Quote.objects.filter(embedding=[])
         for q in quotes:
             resp = embed_text(q.content)
