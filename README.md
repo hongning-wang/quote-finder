@@ -21,4 +21,4 @@ python manage.py runserver
 ```
 
 ### Possible Next Steps
-Create frontend component. Use Gemini API to rerank top k choices based on similarity to natural language.
+Create frontend component. Use Gemini API to rerank top k choices based on similarity to natural language input.
